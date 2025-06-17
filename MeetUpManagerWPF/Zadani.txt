@@ -53,6 +53,7 @@ Zobrazení kolizí v kalendáři
 automatické upozornění na konfliktní termíny u účastníků/místností
 Možnost přidat komentáře k události
 
+
 Základní notifikační “přehled” – dashboard
 
 co tě dnes čeká, kolik pozvánek je nevyřízených, atd.
@@ -67,10 +68,16 @@ Typ akce (EventType)
 Id, Název (schůzka, party…)
 Místnost (Room)
 Id, Název, Kapacita, Lokalita
+
+
 Můžeš rozšiřovat například o:
 
 Role uživatelů, komentáře, nebo opakování.
 Pokud přidáš poskytování feedbacku/řazení podle priority, tak ještě pole "priorita".
+
+
+
+
 Jak může vypadat UI:
 Login/registrace obrazovka
 Dashboard: Přehled dnešních a nadcházejících akcí, nové (nevyřízené) pozvánky
@@ -79,11 +86,14 @@ Seznam akcí: tabulka, kde vidíš své akce (jako organizátor i jako účastn�
 Detail akce: všechny informace, seznam účastníků, možnost spravovat pozvánky, komentáře
 Dialog pro vytvoření/úpravu akce: s výběrem pozvaných uživatelů, místnosti, typu, přidáním popisu
 Seznam místností/typů akcí: pro admina
+
+
 Technologie a patterny:
 Databáze: SQLite nebo SQL Server Express (lokální DB, ideál na ukázku)
 ORM: Entity Framework Core
 Design pattern: MVVM (ViewModel na každou obrazovku)
 UI toolkity: doporučuji Material Design in XAML nebo ModernWPF pro lepší vzhled
+
 Bonusy navíc:
 Reálné validace vstupů
 Možnost změny jazyka aplikace (CZ/EN)

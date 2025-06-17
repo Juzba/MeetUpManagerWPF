@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MeetUpManagerWPF.Pages;
 
 namespace MeetUpManagerWPF
 {
@@ -19,6 +20,16 @@ namespace MeetUpManagerWPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_DashBoard(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new DashBoard());
+        }
+
+        private void Button_Calendar(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new CalendarPage());
         }
     }
 }

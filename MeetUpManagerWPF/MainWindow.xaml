@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="DashBoard" Content="DashBoard" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="142" Click="Button_DashBoard"/>
+        <Button x:Name="Kalendář" Content="Button" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="142" Margin="0,64,0,0" Click="Button_Calendar"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="142" Margin="0,128,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="142" Margin="0,192,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="142" Margin="0,256,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="142" Margin="0,320,0,0"/>
+        <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="0,384,0,0"  Fill="#FFDDDDDD" Stroke="#FF707070"/>
+        <Frame x:Name="MainFrame" Content="Frame" HorizontalAlignment="Stretch" Margin="142,0,0,0" VerticalAlignment="Stretch" Background="#FF2B2B2B"/>
 
     </Grid>
 </Window>
