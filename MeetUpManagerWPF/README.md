@@ -1,0 +1,92 @@
+﻿Zadání – Plánovač událostí a kalendář
+Hlavní cíl
+Vytvoř desktopovou WPF aplikaci pro správu událostí, kde uživatelé mohou zakládat akce (schůzky, workshopy…), zvát na ně ostatní, sledovat své pozvánky, reagovat na pozvánky a mít přehledný kalendář.
+
+Hlavní funkce (minimum):
+Správa uživatelů
+
+registrace, přihlášení/odhlášení uživatele (stačí bez šifrovaní hesla, pro demo)
+seznam uživatelů v systému (pro výběr účastníků akcí)
+Zakládání akcí/událostí
+
+vytvoření nové události: název, popis, datum, čas, délka, typ, místo/umístění, organizátor (vytvoří přihlášený uživatel)
+editace a mazání vlastních událostí (organizátor)
+nastavení typu akce (schůzka, porada, oslava, apod.)
+Pozvánky a účastníci
+
+organizátor může pozvat další uživatele (vybrat z uživatelů v systému)
+každý pozvaný může pozvánku přijmout nebo odmítnout (akceptovat/odmítnout)
+přehled vlastních pozvánek a účast na akcích
+Kalendář
+
+vizuální přehled všech svých akcí (měsíční/týdenní agenda, možnost kliknout pro detail)
+barevné odlišení podle typu akce, místo, či statusu účasti
+Místnosti/Umístění
+
+evidence místností/umístění, kde se akce mohou konat
+možnost evidovat kolize (“Konflikt: místnost už je obsazená v tomto termínu”)
+Typy akcí
+
+možnost filtrování akcí podle typu (schůzky, workshopy…)
+Volitelné (pro vyšší úroveň a větší zábavu):
+Role uživatelů
+
+uživatel může být organizátor nebo účastník
+organizátor může spravovat účastníky; pouze administrátor může přidělovat oprávnění (volitelné)
+Notifikace/Připomínky
+
+notifikace nebo připomínka události (například 1 hodinu před startem – může to být jen jednoduchý MessageBox)
+možnost nastavit vlastní čas připomínky
+“notifikace” můžeš simulovat, když je aplikace spuštěná
+Opakované akce
+
+události, které se opakují (každé pondělí/každý měsíc apod.)
+Export/Import akcí
+
+možnost exportovat akce do CSV/PDF
+import událostí odjinud
+Vyhledávání a filtrování
+
+podle data, typu, místa, účastníků…
+Zobrazení kolizí v kalendáři
+
+automatické upozornění na konfliktní termíny u účastníků/místností
+Možnost přidat komentáře k události
+
+Základní notifikační “přehled” – dashboard
+
+co tě dnes čeká, kolik pozvánek je nevyřízených, atd.
+Návrh databázového modelu (základ):
+Uživatel (User)
+Id, Jméno, E-mail
+Událost (Event)
+Id, Název, Popis, DatumOd, DatumDo, TypId, MístnostId, OrganizátorId
+Pozvánka (Invitation)
+Id, UdálostId, UživatelskýId, Stav (přijatá/odmítnutá/nevyřízená)
+Typ akce (EventType)
+Id, Název (schůzka, party…)
+Místnost (Room)
+Id, Název, Kapacita, Lokalita
+Můžeš rozšiřovat například o:
+
+Role uživatelů, komentáře, nebo opakování.
+Pokud přidáš poskytování feedbacku/řazení podle priority, tak ještě pole "priorita".
+Jak může vypadat UI:
+Login/registrace obrazovka
+Dashboard: Přehled dnešních a nadcházejících akcí, nové (nevyřízené) pozvánky
+Kalendář: měsíční/týdenní zobrazení, barevné boxy pro typy akcí
+Seznam akcí: tabulka, kde vidíš své akce (jako organizátor i jako účastník)
+Detail akce: všechny informace, seznam účastníků, možnost spravovat pozvánky, komentáře
+Dialog pro vytvoření/úpravu akce: s výběrem pozvaných uživatelů, místnosti, typu, přidáním popisu
+Seznam místností/typů akcí: pro admina
+Technologie a patterny:
+Databáze: SQLite nebo SQL Server Express (lokální DB, ideál na ukázku)
+ORM: Entity Framework Core
+Design pattern: MVVM (ViewModel na každou obrazovku)
+UI toolkity: doporučuji Material Design in XAML nebo ModernWPF pro lepší vzhled
+Bonusy navíc:
+Reálné validace vstupů
+Možnost změny jazyka aplikace (CZ/EN)
+Nápověda/detailní popisky v UI
+Jednoduchá testovací data při prvním spuštění
+Export kalendáře do Google Calendar (přes API – pokročilé)
