@@ -20,6 +20,7 @@ namespace MeetUpManagerWPF
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new DashBoard());
         }
 
         private void Button_DashBoard(object sender, RoutedEventArgs e)
