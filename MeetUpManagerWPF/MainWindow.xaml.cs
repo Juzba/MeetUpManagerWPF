@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MeetUpManagerWPF.Data;
 using MeetUpManagerWPF.Pages;
 
 namespace MeetUpManagerWPF
@@ -17,8 +18,12 @@ namespace MeetUpManagerWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly AppDbContext _db;
+
+
+        public MainWindow(AppDbContext db)
         {
+            _db = db;
             InitializeComponent();
             MainFrame.Navigate(new DashBoard());
         }
