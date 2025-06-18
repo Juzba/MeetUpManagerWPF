@@ -3,37 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:UserControls="clr-namespace:MeetUpManagerWPF.View.UserControls"
         xmlns:local="clr-namespace:MeetUpManagerWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="24px"></RowDefinition>
-            <RowDefinition Height="40px"></RowDefinition>
+            <RowDefinition Height="70px"></RowDefinition>
             <RowDefinition ></RowDefinition>
             <RowDefinition Height="20px"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Menu Background="#196774" Foreground="White">
-            <MenuItem Header="File" FontSize="16">
-                <MenuItem Header="Exit"></MenuItem>
-            </MenuItem>
-            <MenuItem Header="Edit" FontSize="16"></MenuItem>
-        </Menu>
-        <Grid Background="#196774" Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-
-            <Button Grid.Column="0" Margin="5" FontSize="18" Click="Button_AddEvent" Content="Přidat událost"></Button>
-            <Button Grid.Column="1" Margin="5" FontSize="18" Click="Button_DashBoard" Content="DashBoard"></Button>
-            <Button Grid.Column="2" Margin="5" FontSize="18" Click="Button_Calendar" Content="Kalendář"></Button>
-            <Button Grid.Column="4" Margin="5" FontSize="18" Name="Button_Login" Content="Login"></Button>
-        </Grid>
-        <Frame NavigationUIVisibility="Hidden" Name="MainFrame" Background="#196774" Grid.Row="2"></Frame>
+        <UserControls:NavBar></UserControls:NavBar>
+        <Frame NavigationUIVisibility="Hidden" Name="MainFrame" Background="#196774" Grid.Row="1"></Frame>
     </Grid>
 </Window>

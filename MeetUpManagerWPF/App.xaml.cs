@@ -1,5 +1,4 @@
 ﻿using MeetUpManagerWPF.Data;
-using MeetUpManagerWPF.Pages;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
 using System.Data;

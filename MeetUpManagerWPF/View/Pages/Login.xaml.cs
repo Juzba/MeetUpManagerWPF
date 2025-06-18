@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MeetUpManagerWPF.Pages
+namespace MeetUpManagerWPF.View.Pages
 {
     /// <summary>
-    /// Interakční logika pro DashBoard.xaml
+    /// Interakční logika pro Login.xaml
     /// </summary>
-    public partial class DashBoard : Page
+    public partial class Login : Page
     {
-        public DashBoard()
+        public Login()
         {
             InitializeComponent();
         }

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MeetUpManagerWPF.Pages
+namespace MeetUpManagerWPF.View.UserControls
 {
     /// <summary>
-    /// Interakční logika pro CalendarPage.xaml
+    /// Interakční logika pro ClearebleTextBox.xaml
     /// </summary>
-    public partial class CalendarPage : Page
+    public partial class ClearebleTextBox : UserControl
     {
-        public CalendarPage()
+        public ClearebleTextBox()
         {
             InitializeComponent();
         }
