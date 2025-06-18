@@ -20,6 +20,25 @@ namespace MeetUpManagerWPF.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<UserRole>().HasData
+            (
+                new UserRole
+                {
+                    Id = "admin-roleid-1",
+                    Role = "Admin"
+                },
+                new UserRole
+                {
+                    Id = "eventmanager-roleid-2",
+                    Role = "EventManager"
+                },
+                new UserRole
+                {
+                    Id = "visitor-roleid-3",
+                    Role = "Visitor"
+                }
+            );
+
             modelBuilder.Entity<User>().HasData
             (
                 new User
@@ -28,7 +47,7 @@ namespace MeetUpManagerWPF.Data
                     Name = "Jiří Novák",
                     Email = "Juzba88@gmail.com",
                     Password = "123456",
-                    UserRoleId = "",
+                    UserRoleId = "admin-roleid-1",
                 },
                 new User
                 {
@@ -36,7 +55,7 @@ namespace MeetUpManagerWPF.Data
                     Name = "Katka Nováková",
                     Email = "Katka@gmail.com",
                     Password = "123456",
-                    UserRoleId = "",
+                    UserRoleId = "eventmanager-roleid-2",
                 },
                 new User
                 {
@@ -44,7 +63,7 @@ namespace MeetUpManagerWPF.Data
                     Name = "Karel Novák",
                     Email = "Karel@gmail.com",
                     Password = "123456",
-                    UserRoleId = "",
+                    UserRoleId = "visitor-roleid-3",
                 }
             );
         }

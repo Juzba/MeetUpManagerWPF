@@ -17,7 +17,7 @@ namespace MeetUpManagerWPF.Models
         
 
         public string UserRoleId { get; set; } = string.Empty;
-        public UserRole UserRole { get; set; } = default!;
+        public UserRole? UserRole { get; set; }
 
 
 

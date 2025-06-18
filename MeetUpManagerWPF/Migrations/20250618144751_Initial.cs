@@ -72,13 +72,23 @@ namespace MeetUpManagerWPF.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "UserRole",
+                columns: new[] { "Id", "Role" },
+                values: new object[,]
+                {
+                    { "admin-roleid-1", "Admin" },
+                    { "eventmanager-roleid-2", "EventManager" },
+                    { "visitor-roleid-3", "Visitor" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Email", "Name", "Password", "UserRoleId" },
                 values: new object[,]
                 {
-                    { "Juzba-admin-sffdf4-54fdds-sdf17-147", "Juzba88@gmail.com", "Jiří Novák", "123456", "" },
-                    { "Karel-visitor-sffdf4-54fdds-ter98-895", "Karel@gmail.com", "Karel Novák", "123456", "" },
-                    { "Katka-eventmanager-sffdf4-54fdds-eg58k", "Katka@gmail.com", "Katka Nováková", "123456", "" }
+                    { "Juzba-admin-sffdf4-54fdds-sdf17-147", "Juzba88@gmail.com", "Jiří Novák", "123456", "admin-roleid-1" },
+                    { "Karel-visitor-sffdf4-54fdds-ter98-895", "Karel@gmail.com", "Karel Novák", "123456", "visitor-roleid-3" },
+                    { "Katka-eventmanager-sffdf4-54fdds-eg58k", "Katka@gmail.com", "Katka Nováková", "123456", "eventmanager-roleid-2" }
                 });
 
             migrationBuilder.CreateIndex(

@@ -97,7 +97,7 @@ namespace MeetUpManagerWPF.Migrations
                             Email = "Juzba88@gmail.com",
                             Name = "Jiří Novák",
                             Password = "123456",
-                            UserRoleId = ""
+                            UserRoleId = "admin-roleid-1"
                         },
                         new
                         {
@@ -105,7 +105,7 @@ namespace MeetUpManagerWPF.Migrations
                             Email = "Katka@gmail.com",
                             Name = "Katka Nováková",
                             Password = "123456",
-                            UserRoleId = ""
+                            UserRoleId = "eventmanager-roleid-2"
                         },
                         new
                         {
@@ -113,7 +113,7 @@ namespace MeetUpManagerWPF.Migrations
                             Email = "Karel@gmail.com",
                             Name = "Karel Novák",
                             Password = "123456",
-                            UserRoleId = ""
+                            UserRoleId = "visitor-roleid-3"
                         });
                 });
 
@@ -129,6 +129,23 @@ namespace MeetUpManagerWPF.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserRole");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "admin-roleid-1",
+                            Role = "Admin"
+                        },
+                        new
+                        {
+                            Id = "eventmanager-roleid-2",
+                            Role = "EventManager"
+                        },
+                        new
+                        {
+                            Id = "visitor-roleid-3",
+                            Role = "Visitor"
+                        });
                 });
 
             modelBuilder.Entity("MeetUpManagerWPF.Models.Event", b =>
