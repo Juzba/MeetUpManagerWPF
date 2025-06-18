@@ -26,6 +26,7 @@ namespace MeetUpManagerWPF
             _db = db;
             InitializeComponent();
             MainFrame.Navigate(new DashBoard());
+
         }
 
         private void Button_DashBoard(object sender, RoutedEventArgs e)
@@ -36,6 +37,11 @@ namespace MeetUpManagerWPF
         private void Button_Calendar(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new CalendarPage());
+        }
+
+        private void Button_AddEvent(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new AddEvent());
         }
     }
 }

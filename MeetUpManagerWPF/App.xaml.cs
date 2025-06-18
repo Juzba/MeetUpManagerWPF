@@ -1,4 +1,5 @@
 ﻿using MeetUpManagerWPF.Data;
+using MeetUpManagerWPF.Pages;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
 using System.Data;
@@ -23,6 +24,7 @@ namespace MeetUpManagerWPF
 
             var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();
+            
         }
 
     }
