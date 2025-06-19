@@ -14,7 +14,8 @@
             <RowDefinition Height="20px"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <UserControls:NavBar></UserControls:NavBar>
+        <UserControls:NavBar x:Name="navBar"></UserControls:NavBar>
+        <ListView Panel.ZIndex="2" Grid.Row="1" x:Name="textBlock1" FontSize="20"></ListView>
         <Frame NavigationUIVisibility="Hidden" Name="MainFrame" Background="#196774" Grid.Row="1"></Frame>
     </Grid>
 </Window>

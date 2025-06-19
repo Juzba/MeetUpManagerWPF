@@ -1,4 +1,5 @@
-﻿using MeetUpManagerWPF.Data;
+﻿using MeetUpManagerWPF.Code.Autorization;
+using MeetUpManagerWPF.Data;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
 using System.Data;
@@ -18,6 +19,7 @@ namespace MeetUpManagerWPF
             var services = new ServiceCollection();
             services.AddDbContext<AppDbContext>();
             services.AddSingleton<MainWindow>();
+            services.AddSingleton<Acess>();
 
             ServiceProvider = services.BuildServiceProvider();
 

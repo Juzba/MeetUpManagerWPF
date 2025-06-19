@@ -28,10 +28,10 @@
                 <ColumnDefinition Width="140"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Margin="5" FontSize="18"  Content="Přidat událost"></Button>
+            <Button Grid.Column="0" Margin="5" FontSize="18"  Content="Přidat událost" Click="Button_AddEvent"></Button>
             <Button Grid.Column="1" Margin="5" FontSize="18"  Content="DashBoard"></Button>
             <Button Grid.Column="2" Margin="5" FontSize="18"  Content="Kalendář"></Button>
-            <Button Grid.Column="4" Margin="5" FontSize="18" Name="Button_Login" Click="Button_Login_Click" Content="Login"></Button>
+            <Button Grid.Column="4" Margin="5" FontSize="18"  Click="Button_Login" Content="Login"></Button>
         </Grid>
     </Grid>
 </UserControl>
