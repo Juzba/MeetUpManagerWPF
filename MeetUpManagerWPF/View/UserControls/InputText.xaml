@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="CustomFormWPF.View.UserControls.InputText"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CustomFormWPF.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="250">
+    <Grid Background="White">
+
+        <TextBlock x:Name="textBlockInput" Text="{Binding MyPlaceHolder}" Margin="5" VerticalAlignment="Center" FontSize="18" Foreground="LightGray"></TextBlock>
+        <TextBox Background="Transparent" MaxLength="20" x:Name="textBoxInput" Padding="5"  FontSize="18" TextChanged="TextBox_Change"></TextBox>
+        <Button HorizontalAlignment="Right" Width="40" FontSize="20" Foreground="LightGray" Content="X" Background="Transparent" BorderBrush="Transparent" Click="Button_Clear"></Button>
+
+    </Grid>
+</UserControl>
